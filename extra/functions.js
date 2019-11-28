@@ -103,7 +103,7 @@ function daysInMonth (month, year) {
     return new Date(year, month, 0).getDate(); 
 } 
 
-function dayStart(day, month, year){  //primeste luni indexate incepand cu 1
+function dayStart(day, month, year){  //primeste luni indexate incepand cu 1; returneaza numele zilei (0 = luni, ...)
     --month;
     let d = new Date(year, month, day);
     let val = d.getDay();
@@ -143,3 +143,7 @@ function selectDay(D){
     }
     else alert(`o shit`);
 }
+
+
+
+
