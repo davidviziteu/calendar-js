@@ -111,15 +111,14 @@ function dayStart(day, month, year){  //primeste luni indexate incepand cu 1; re
         return 6;
     return --val;
 }
-
 function backToToday(){
     renderYear(today.getFullYear())
     renderMonths();
     renderDays(today.getMonth(), today.getFullYear());
     selectedYear = today.getFullYear();
     selectedMonth = today.getMonth();
+    document.getElementById(`selectedDay`).id=`hide`;
 }
-
 //year changer
 function nextYear(){
     console.log(`im alive`);
@@ -128,22 +127,18 @@ function nextYear(){
     renderMonths();
     renderDays(selectedMonth, selectedYear);
 }
-
 function prevYear(){
     --selectedYear;
     document.getElementById("mm").innerHTML = `${selectedYear}`;
     renderMonths();
     renderDays(selectedMonth, selectedYear);
 }
-
 function selectDay(D){
     if(D>0){
     selectedDay=D;
-    alert(`you selected ${selectedDay}.${selectedMonth + 1}.${selectedYear}`)
+    renderSelectedDay();
+    document.getElementById(`hide`).id=`selectedDay`;
+    //alert(`you selected ${selectedDay}.${selectedMonth + 1}.${selectedYear}`)
     }
     else alert(`o shit`);
 }
-
-
-
-
