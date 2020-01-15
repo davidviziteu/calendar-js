@@ -46,7 +46,7 @@ function renderMonths(){
 let lastStyled; //ca sa stiu la ce luna sa sterg id-ul "selected" cand selectez alta
 console.log(lastStyled)
 
-//sa mi fut una cat mi o luat sa fac cacatu asta de functie cu css ul altcuiva
+
 function styleSelectedMonth(M){ 
     toBeStyled = document.getElementById(`${M}`);
     console.log(`to be styled: ${toBeStyled}, M = ${M}, selectedMonth = ${selectedMonth}`)
@@ -95,8 +95,7 @@ function renderDays(M, Y){
 //date picker
 let t = selectedYear;
 function yearChange(){
-    document.getElementById("mm").innerHTML = "muie moscu";
-
+    return 1;
 }
 
 function daysInMonth (month, year) { 
